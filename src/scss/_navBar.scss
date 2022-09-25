@@ -1,0 +1,22 @@
+@import "./mixins";
+
+.nav {
+  padding-top: 3vh;
+  padding-bottom: 3vh;
+  @include flexCenter(row);
+  background-color: orange;
+  justify-content: space-evenly;
+  &__logo {
+    &:hover {
+      color: rgb(9, 39, 162);
+    }
+  }
+  &__Links {
+    @include flexCenter(row);
+    gap: 3vh;
+  }
+  &__Login {
+    @include flexCenter(row);
+    gap: 1vh;
+  }
+}
