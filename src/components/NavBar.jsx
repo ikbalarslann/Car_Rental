@@ -3,7 +3,9 @@ const NavBar = () => {
   return (
     <div className="nav">
       <div className="nav__logo">
-        <Link to="/">Car Rental</Link>
+        <Link className="nav__logo" to="/">
+          Car Rental
+        </Link>
       </div>
       <div className="nav__pages">
         <Link to="/">Home</Link>
