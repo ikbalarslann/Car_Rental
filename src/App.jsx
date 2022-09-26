@@ -1,12 +1,21 @@
-import NavBar from "./components/NavBar";
+import { Link } from "react-router-dom";
 import "./scss/main.scss";
 
-function App() {
+const App = () => {
   return (
-    <>
-      <NavBar />
-    </>
+    <div>
+      <h1>Hello from the main page of the app!</h1>
+      <p>Here are some examples of links to other pages</p>
+      <hr />
+      <nav>
+        <ul>
+          <li>
+            <Link to="user">User page</Link>
+          </li>
+        </ul>
+      </nav>
+    </div>
   );
-}
+};
 
 export default App;

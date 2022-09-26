@@ -11,11 +11,11 @@
       color: rgb(9, 39, 162);
     }
   }
-  &__Links {
+  &__pages {
     @include flexCenter(row);
     gap: 3vh;
   }
-  &__Login {
+  &__user {
     @include flexCenter(row);
     gap: 1vh;
   }
