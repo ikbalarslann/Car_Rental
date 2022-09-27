@@ -1,4 +1,16 @@
+import HeroPages from "../components/HeroPages";
+import Banner from "../components/Banner";
+import Testimonial from "../components/Testimonial";
+
 const Testimonials = () => {
-  return <h1>hey i am testimonials page</h1>;
+  return (
+    <div>
+      <h1>hey i am Testimonials page</h1>
+      <HeroPages />
+      <Testimonial />
+      <Banner />
+    </div>
+  );
 };
+
 export default Testimonials;
