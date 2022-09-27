@@ -4,7 +4,7 @@ import NavBar from "../NavBar";
 const User = () => {
   return (
     <div>
-      <NavBar />
+      {/* <NavBar /> */}
 
       <Outlet />
     </div>

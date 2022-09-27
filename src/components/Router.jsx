@@ -10,31 +10,36 @@ import Vehicles from "./pages/Vehicles";
 import Testimonials from "./pages/Testimonials";
 import OurTeam from "./pages/OurTeam";
 import Contact from "./pages/Contact";
+import Root from "./pages/Root";
 
 const Router = () => {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <Home />,
+      element: <Root />,
       errorElement: <ErrorPage />,
-    },
-    {
-      path: "user/",
-      element: <User />,
       children: [
-        { path: "signIn", element: <SignIn /> },
-        { path: "register", element: <Register /> },
-      ],
-    },
-    {
-      path: "pages/",
-      element: <Pages />,
-      children: [
-        { path: "about", element: <About /> },
-        { path: "vehicles", element: <Vehicles /> },
-        { path: "testimonials", element: <Testimonials /> },
-        { path: "ourTeam", element: <OurTeam /> },
-        { path: "contact", element: <Contact /> },
+        { index: true, element: <Home /> },
+        {
+          path: "user/",
+          element: <User />,
+          children: [
+            { path: "signIn", element: <SignIn /> },
+            { path: "register", element: <Register /> },
+          ],
+        },
+        {
+          path: "pages/",
+          element: <Pages />,
+          children: [
+            { path: "home", element: <Home /> },
+            { path: "about", element: <About /> },
+            { path: "vehicles", element: <Vehicles /> },
+            { path: "testimonials", element: <Testimonials /> },
+            { path: "ourTeam", element: <OurTeam /> },
+            { path: "contact", element: <Contact /> },
+          ],
+        },
       ],
     },
   ]);

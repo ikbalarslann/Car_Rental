@@ -4,8 +4,6 @@ import NavBar from "../NavBar";
 const Pages = () => {
   return (
     <div>
-      <NavBar />
-
       <Outlet />
     </div>
   );
