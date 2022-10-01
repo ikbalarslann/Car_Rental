@@ -79,3 +79,5 @@ export const Car_Data = [
     fuel: "Gasoline",
   },
 ];
+
+export default Car_Data;

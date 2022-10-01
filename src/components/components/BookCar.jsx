@@ -1,6 +1,7 @@
 import { useState } from "react";
 import ReactDatePicker from "react-datepicker";
 import Modal from "./Modal";
+import Car_Data from "./CarData";
 
 const BookCar = () => {
   const [modal, setModal] = useState(false);
@@ -51,10 +52,11 @@ const BookCar = () => {
             required
           >
             <option value="">Select a car type</option>
-            <option value="Sedan">Sedan</option>
-            <option value="SUV">SUV</option>
-            <option value="Truck">Truck</option>
-            {/* Add more options as needed */}
+            {Car_Data.map((element) => (
+              <option key={element.name} value={element.name}>
+                {element.name}
+              </option>
+            ))}
           </select>
         </div>
         <div>
@@ -73,7 +75,8 @@ const BookCar = () => {
             <option value="Istanbul">Istanbul</option>
             <option value="Ankara">Ankara</option>
             <option value="Izmir">Izmir</option>
-            {/* Add more options as needed */}
+            <option value="Adana">Adana</option>
+            <option value="Bursa">Bursa</option>
           </select>
         </div>
         <div>
@@ -88,11 +91,12 @@ const BookCar = () => {
             onChange={handleDropOfChange}
             required
           >
-            <option value="">Select Drop Off Location</option>
+            <option value="">Select Pick Up Location</option>
             <option value="Istanbul">Istanbul</option>
             <option value="Ankara">Ankara</option>
             <option value="Izmir">Izmir</option>
-            {/* Add more options as needed */}
+            <option value="Adana">Adana</option>
+            <option value="Bursa">Bursa</option>
           </select>
         </div>
         <div>

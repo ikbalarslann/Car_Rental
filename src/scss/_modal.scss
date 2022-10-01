@@ -31,3 +31,48 @@
   border-radius: 5px;
   cursor: pointer;
 }
+
+.modal__location-date {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  &-item {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+  }
+}
+
+.modal__sub-title {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.modal__label {
+  font-weight: bold;
+}
+
+.modal__value {
+  margin-top: 5px;
+}
+
+.modal__car {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &-info {
+    margin-bottom: 10px;
+  }
+
+  &-image {
+    max-width: 100%;
+    height: auto;
+  }
+}

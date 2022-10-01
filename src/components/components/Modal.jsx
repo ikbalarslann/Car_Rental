@@ -1,11 +1,15 @@
-const Modal = (
-  { setModal },
+import Car_Data from "./CarData";
+
+const Modal = ({
+  setModal,
   carName,
   pickUpDate,
   dropOffDate,
   pickUpLocation,
-  dropOffLocation
-) => {
+  dropOfLocation,
+}) => {
+  let car = Car_Data.find((element) => element.name === carName);
+
   return (
     <div className="modal-container">
       <div className="modal">
@@ -23,31 +27,34 @@ const Modal = (
           </p>
         </div>
         <div className="modal__location-date">
-          {/* <div className="modal__location-date-item">
+          <div className="modal__location-date-item">
             <h2 className="modal__sub-title">Location & Date</h2>
+
             <p className="modal__label">Pick-Up Date & Time</p>
             {pickUpDate && (
-              <p className="modal__value">{pickUpDate.toString()}</p>
+              <p className="modal__value">{pickUpDate.toDateString()}</p>
             )}
+
             <p className="modal__label">Drop-Off Date & Time</p>
             {dropOffDate && (
-              <p className="modal__value">{dropOffDate.toString()}</p>
+              <p className="modal__value">{dropOffDate.toDateString()}</p>
             )}
             <p className="modal__label">Pick-Up Location</p>
-            {pickUpLocation && (
-              <p className="modal__value">{pickUpLocation.toString()}</p>
-            )}
+            <p className="modal__value">{pickUpLocation}</p>
+
             <p className="modal__label">Drop-Off Location</p>
-            {dropOffLocation && (
-              <p className="modal__value">{dropOffLocation.toString()}</p>
-            )}
-          </div> */}
+            <p className="modal__value">{dropOfLocation}</p>
+          </div>
           <div className="modal__car">
             <div className="modal__car-info">
               <p className="modal__label">Car -</p>
               <p className="modal__value">{carName}</p>
             </div>
-            <img src="" alt="carImage" className="modal__car-image" />
+            <img
+              src={car && car.img}
+              alt="carImage"
+              className="modal__car-image"
+            />
           </div>
         </div>
         <hr className="modal__hr" />
