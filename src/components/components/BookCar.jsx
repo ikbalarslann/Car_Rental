@@ -1,29 +1,36 @@
 import { useState } from "react";
 import ReactDatePicker from "react-datepicker";
+import Modal from "./Modal";
 
 const BookCar = () => {
-  const [formData, setFormData] = useState({
-    carType: "",
-    pickUpLocation: "",
-    dropOfLocation: "",
-    pickUpDate: "",
-    dropOffDate: "",
-  });
+  const [modal, setModal] = useState(false);
 
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
+  //booking car
+  const [carType, setCarType] = useState("");
+  const [pickUp, setPickUp] = useState("");
+  const [dropOf, setDropOf] = useState("");
+  const [pickDate, setPickDate] = useState(null);
+  const [dropDate, setDropDate] = useState(null);
+
+  //booking car event handlers
+  const handleCarTypeChange = (e) => {
+    setCarType(e.target.value);
   };
-
-  const handleDateChange = (date, field) => {
-    setFormData({ ...formData, [field]: date });
+  const handlePickUpChange = (e) => {
+    setPickUp(e.target.value);
+  };
+  const handleDropOfChange = (e) => {
+    setDropOf(e.target.value);
+  };
+  const handlePickDateChange = (e) => {
+    setPickDate(e);
+  };
+  const handleDropDateChange = (e) => {
+    setDropDate(e);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const { carType, password } = formData;
-
-    console.log(`Car Type: ${carType}, Password: ${password}`);
   };
 
   return (
@@ -33,14 +40,14 @@ const BookCar = () => {
       <form className="book-car__form" onSubmit={handleSubmit}>
         <div>
           <label className="book-car__label" htmlFor="carType">
-            Car Type:
+            Car Type: {carType}
           </label>
           <select
             className="book-car__select"
             id="carType"
             name="carType"
-            value={formData.carType}
-            onChange={handleInputChange}
+            value={carType}
+            onChange={handleCarTypeChange}
             required
           >
             <option value="">Select a car type</option>
@@ -52,39 +59,39 @@ const BookCar = () => {
         </div>
         <div>
           <label className="book-car__label" htmlFor="pickUpLocation">
-            Pick Up Location:
+            Pick Up Location:{pickUp}
           </label>
           <select
             className="book-car__select"
             id="pickUpLocation"
             name="pickUpLocation"
-            value={formData.pickUpLocation}
-            onChange={handleInputChange}
+            value={pickUp}
+            onChange={handlePickUpChange}
             required
           >
             <option value="">Select Pick Up Location</option>
-            <option value="Sedan">Istanbul</option>
-            <option value="SUV">Ankara</option>
-            <option value="Truck">Izmir</option>
+            <option value="Istanbul">Istanbul</option>
+            <option value="Ankara">Ankara</option>
+            <option value="Izmir">Izmir</option>
             {/* Add more options as needed */}
           </select>
         </div>
         <div>
           <label className="book-car__label" htmlFor="dropOfLocation">
-            Drop Off Location:
+            Drop Off Location:{dropOf}
           </label>
           <select
             className="book-car__select"
             id="dropOfLocation"
             name="dropOfLocation"
-            value={formData.dropOfLocation}
-            onChange={handleInputChange}
+            value={dropOf}
+            onChange={handleDropOfChange}
             required
           >
             <option value="">Select Drop Off Location</option>
-            <option value="Sedan">Istanbul</option>
-            <option value="SUV">Ankara</option>
-            <option value="Truck">Izmir</option>
+            <option value="Istanbul">Istanbul</option>
+            <option value="Ankara">Ankara</option>
+            <option value="Izmir">Izmir</option>
             {/* Add more options as needed */}
           </select>
         </div>
@@ -95,8 +102,8 @@ const BookCar = () => {
           <ReactDatePicker
             className="book-car__datepicker"
             id="pickUpDate"
-            selected={formData.pickUpDate}
-            onChange={(date) => handleDateChange(date, "pickUpDate")}
+            selected={pickDate}
+            onChange={handlePickDateChange}
             required
           />
         </div>
@@ -107,15 +114,29 @@ const BookCar = () => {
           <ReactDatePicker
             className="book-car__datepicker"
             id="dropOffDate"
-            selected={formData.dropOffDate}
-            onChange={(date) => handleDateChange(date, "dropOffDate")}
+            selected={dropDate}
+            onChange={handleDropDateChange}
             required
           />
         </div>
         <div>
-          <button className="book-car__form-button" type="submit">
+          <button
+            className="book-car__form-button"
+            type="submit"
+            onClick={() => setModal(true)}
+          >
             Search
           </button>
+          {modal && (
+            <Modal
+              setModal={setModal}
+              carName={carType}
+              pickUpDate={pickDate}
+              dropOffDate={dropDate}
+              pickUpLocation={pickUp}
+              dropOfLocation={dropOf}
+            />
+          )}
         </div>
       </form>
     </div>
