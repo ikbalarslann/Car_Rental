@@ -41,7 +41,7 @@ const BookCar = () => {
       <form className="book-car__form" onSubmit={handleSubmit}>
         <div>
           <label className="book-car__label" htmlFor="carType">
-            Car Type: {carType}
+            Car Type:
           </label>
           <select
             className="book-car__select"
