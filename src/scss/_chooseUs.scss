@@ -1,0 +1,83 @@
+/* CSS for ChooseUs Component */
+.chooseUs {
+  text-align: center;
+  padding: 20px;
+  background-color: #f2f2f2;
+}
+
+.chooseUs__title {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.chooseUs__image {
+  /* Add styles for your image here */
+}
+
+.chooseUs__content {
+  max-width: 800px; /* Adjust the maximum width as needed */
+  margin: 0 auto; /* Center content horizontally */
+}
+
+.chooseUs__subtitle {
+  font-size: 18px;
+  color: #666;
+}
+
+.chooseUs__main-title {
+  font-size: 36px;
+  color: #000;
+  margin: 10px 0;
+}
+
+.chooseUs__description {
+  font-size: 16px;
+  color: #666;
+}
+
+.chooseUs__button {
+  background-color: #db8b23;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.chooseUs__button:hover {
+  background-color: #ed5118;
+}
+
+.chooseUs__features {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+
+.chooseUs__feature {
+  flex: 1;
+  margin: 0 10px;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.chooseUs__icon {
+  /* Add styles for your feature icons here */
+}
+
+.chooseUs__feature-title {
+  font-size: 20px;
+  color: #333;
+  margin: 10px 0;
+}
+
+.chooseUs__feature-description {
+  font-size: 16px;
+  color: #666;
+}
