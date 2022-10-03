@@ -1,0 +1,57 @@
+/* CSS for Faq Component */
+.faq {
+  text-align: center;
+  padding: 20px;
+}
+
+.faq h2 {
+  font-size: 24px;
+  color: #333;
+}
+
+.faq h4 {
+  font-size: 18px;
+  color: #666;
+  margin-top: 20px;
+}
+
+.faq h1 {
+  font-size: 36px;
+  color: #000;
+  margin-top: 10px;
+}
+
+.faq p {
+  font-size: 16px;
+  color: #666;
+  margin-top: 20px;
+}
+
+.faq-item {
+  margin-top: 20px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.faq-item__question {
+  font-size: 20px;
+  color: #333;
+}
+
+.faq-item__question:hover {
+  color: #007bff; /* Change this color to your desired hover color */
+}
+
+.faq-item.active .faq-item__question {
+  color: #007bff; /* Change this color to your desired active color */
+}
+
+.faq-item__answer {
+  font-size: 16px;
+  color: #333;
+}
+
+.faq-item.active .faq-item__answer {
+  display: block;
+  margin-top: 10px;
+}
