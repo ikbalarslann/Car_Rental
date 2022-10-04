@@ -1,0 +1,31 @@
+/* CSS for HeroPages Component */
+.heroPages {
+  text-align: center;
+  padding: 20px;
+}
+
+.heroPages__title {
+  font-size: 24px;
+  color: #333;
+}
+
+.heroPages__subtitle {
+  font-size: 36px;
+  color: #000;
+  margin-top: 10px;
+}
+
+.heroPages__breadcrumb {
+  font-size: 16px;
+  color: #666;
+  margin-top: 20px;
+}
+
+.heroPages__breadcrumb-link {
+  color: #007bff; /* Link color */
+  text-decoration: none;
+}
+
+.heroPages__breadcrumb-link:hover {
+  text-decoration: underline; /* Underline on hover */
+}

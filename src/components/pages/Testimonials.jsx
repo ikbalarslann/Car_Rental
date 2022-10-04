@@ -6,7 +6,7 @@ const Testimonials = () => {
   return (
     <div>
       <h1>hey i am Testimonials page</h1>
-      <HeroPages />
+      <HeroPages name="Testimonials" />
       <Testimonial />
       <Banner />
     </div>

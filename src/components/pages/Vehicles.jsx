@@ -6,7 +6,7 @@ const Vehicles = () => {
   return (
     <div>
       <h1>hey i am Vehicles page</h1>
-      <HeroPages />
+      <HeroPages name="Vehicles" />
       <CarBox />
       <Banner />
     </div>
