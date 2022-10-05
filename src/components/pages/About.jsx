@@ -1,4 +1,5 @@
 import HeroPages from "../components/HeroPages";
+import AboutCompany from "../components/AboutCompany";
 import PlanTrip from "../components/PlanTrip";
 import Banner from "../components/Banner";
 
@@ -7,7 +8,7 @@ const About = () => {
     <div>
       <h1>hey i am about page</h1>
       <HeroPages name="About" />
-      <div className="about__company">About Company</div>
+      <AboutCompany />
       <PlanTrip />
       <Banner />
     </div>

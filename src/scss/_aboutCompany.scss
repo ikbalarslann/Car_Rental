@@ -1,0 +1,68 @@
+/* CSS for AboutCompany Component */
+.aboutCompany {
+  text-align: center;
+  padding: 20px;
+}
+
+.aboutCompany__title {
+  font-size: 24px;
+  color: #333;
+}
+
+.aboutCompany__image {
+  max-width: 100%;
+  height: auto;
+  margin: 20px 0;
+}
+
+.aboutCompany__content {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.aboutCompany__section-title {
+  font-size: 18px;
+  color: #666;
+  margin-top: 20px;
+}
+
+.aboutCompany__section-subtitle {
+  font-size: 36px;
+  color: #000;
+  margin-top: 10px;
+}
+
+.aboutCompany__section-description {
+  font-size: 16px;
+  color: #666;
+  margin-top: 20px;
+}
+
+.aboutCompany__stats {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.aboutCompany__stat {
+  flex: 1;
+  text-align: center;
+  margin: 0 10px;
+}
+
+.aboutCompany__stat-icon {
+  width: 50px;
+  height: 50px;
+}
+
+.aboutCompany__stat-value {
+  font-size: 24px;
+  color: #333;
+}
+
+.aboutCompany__stat-label {
+  font-size: 14px;
+  color: #666;
+  margin-top: 5px;
+}
