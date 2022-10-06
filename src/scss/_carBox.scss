@@ -1,0 +1,77 @@
+/* CSS for CarBox Component */
+.carBox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.carBox__title {
+  font-size: 24px;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.carBox__item {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin: 10px;
+  width: 300px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.carBox__image {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.carBox__details h1,
+.carBox__pricing h1 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.carBox__mark,
+.carBox__transmission,
+.carBox__doors,
+.carBox__fuel {
+  font-size: 16px;
+  color: #666;
+  margin: 5px 0;
+}
+
+.carBox__price {
+  font-size: 24px;
+  color: #007bff; /* Change the color to your desired value */
+  margin-bottom: 5px;
+}
+
+.carBox__price-unit {
+  font-size: 14px;
+  color: #888;
+  margin: 0;
+}
+/* CSS for the Book Ride Button */
+.carBox__book-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff; /* Button background color */
+  color: #fff; /* Button text color */
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.carBox__book-button:hover {
+  background-color: #0056b3; /* Change the color on hover */
+}
