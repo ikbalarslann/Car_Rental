@@ -1,4 +1,5 @@
 import HeroPages from "../components/HeroPages";
+import OurTeamComponent from "../components/OurTeamComponent";
 import Banner from "../components/Banner";
 
 const OurTeam = () => {
@@ -6,7 +7,7 @@ const OurTeam = () => {
     <div>
       <h1>hey i am OurTeam page</h1>
       <HeroPages name="Our Team" />
-      <div className="our__Team">hey i am Our Team component</div>
+      <OurTeamComponent />
       <Banner />
     </div>
   );
