@@ -1,0 +1,94 @@
+/* ContactComponent.css */
+
+/* Styles for the main block */
+.contactComponent {
+  background-color: #f8f8f8;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  max-width: 600px; /* You can adjust the max width as needed */
+  margin: 0 auto; /* Center-align the component horizontally */
+}
+
+/* Styles for the title element */
+.contactComponent__title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Styles for the info container */
+.contactComponent__info {
+  margin-bottom: 20px;
+}
+
+/* Styles for the info title element */
+.contactComponent__info-title {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+/* Styles for the info description element */
+.contactComponent__info-description {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Styles for the info phone and email links */
+.contactComponent__info-phone,
+.contactComponent__info-email {
+  font-size: 16px;
+  color: #007bff; /* Blue color for links */
+  text-decoration: none;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.contactComponent__info-phone:hover,
+.contactComponent__info-email:hover {
+  text-decoration: underline; /* Underline links on hover */
+}
+
+/* Styles for the info location element */
+.contactComponent__info-location {
+  font-size: 16px;
+  color: #777;
+}
+
+/* Styles for the form container */
+.contactComponent__form {
+  margin-top: 20px;
+}
+
+/* Styles for the form labels */
+.contactComponent__form-label {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+/* Styles for the form input fields */
+.contactComponent__form-input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+/* Style for the form submit button (if you have one) */
+.contactComponent__form-submit-button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.contactComponent__form-submit-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}

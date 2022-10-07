@@ -1,4 +1,5 @@
 import HeroPages from "../components/HeroPages";
+import ContactComponent from "../components/ContactComponent";
 import Banner from "../components/Banner";
 
 const Contact = () => {
@@ -6,7 +7,7 @@ const Contact = () => {
     <div>
       <h1>hey i am Contact page</h1>
       <HeroPages name="Contact" />
-      <div>hey i am contact Page</div>
+      <ContactComponent />
       <Banner />
     </div>
   );
