@@ -1,6 +1,6 @@
 import HeroPages from "../components/HeroPages";
-import AboutCompany from "../components/AboutCompany";
-import PlanTrip from "../components/PlanTrip";
+import AboutCompany from "../widgets/AboutCompany";
+import PlanTrip from "../widgets/PlanTrip";
 import Banner from "../components/Banner";
 
 const About = () => {

@@ -1,14 +1,11 @@
 import { Outlet } from "react-router-dom";
-import NavBar from "../NavBar";
 
-const User = () => {
+const Pages = () => {
   return (
     <div>
-      {/* <NavBar /> */}
-
       <Outlet />
     </div>
   );
 };
 
-export default User;
+export default Pages;

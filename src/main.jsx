@@ -1,8 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import Router from "./components/Router";
-import "./scss/main.scss";
-import NavBar from "./components/NavBar";
+import Router from "./Router";
+import "./assets/scss/main.scss";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>

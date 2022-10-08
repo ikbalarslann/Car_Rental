@@ -1,9 +1,9 @@
-import Person1 from "../../assets/img/team/1.png";
-import Person2 from "../../assets/img/team/2.png";
-import Person3 from "../../assets/img/team/3.png";
-import Person4 from "../../assets/img/team/4.png";
-import Person5 from "../../assets/img/team/5.png";
-import Person6 from "../../assets/img/team/6.png";
+import Person1 from "../assets/img/team/1.png";
+import Person2 from "../assets/img/team/2.png";
+import Person3 from "../assets/img/team/3.png";
+import Person4 from "../assets/img/team/4.png";
+import Person5 from "../assets/img/team/5.png";
+import Person6 from "../assets/img/team/6.png";
 
 const OurTeamComponent = () => {
   const team = [

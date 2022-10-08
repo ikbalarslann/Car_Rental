@@ -1,5 +1,5 @@
-import HarryPoter from "../../assets/img/testomonials/pfp1.jpg";
-import RonRizzly from "../../assets/img/testomonials/pfp2.jpg";
+import HarryPoter from "../assets/img/testomonials/pfp1.jpg";
+import RonRizzly from "../assets/img/testomonials/pfp2.jpg";
 
 const Testimonial = () => {
   const testomonialData = [

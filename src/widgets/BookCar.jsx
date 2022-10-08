@@ -1,7 +1,7 @@
 import { useState } from "react";
 import ReactDatePicker from "react-datepicker";
-import Modal from "./Modal";
-import Car_Data from "./CarData";
+import Modal from "../components/Modal";
+import Car_Data from "../store/CarData";
 
 const BookCar = () => {
   const [modal, setModal] = useState(false);

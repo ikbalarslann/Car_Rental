@@ -1,11 +1,11 @@
-import BookCar from "../components/BookCar";
+import BookCar from "../widgets/BookCar";
 import Hero from "../components/Hero";
-import PlanTrip from "../components/PlanTrip";
-import PickCar from "../components/PickCar";
+import PlanTrip from "../widgets/PlanTrip";
+import PickCar from "../widgets/PickCar";
 import Banner from "../components/Banner";
-import ChooseUs from "../components/ChooseUs";
-import Testimonials from "../components/Testimonial";
-import Faq from "../components/Faq";
+import ChooseUs from "../widgets/ChooseUs";
+import Testimonials from "../widgets/Testimonial";
+import Faq from "../widgets/Faq";
 import Downland from "../components/Download";
 
 const Home = () => {

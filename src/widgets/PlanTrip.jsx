@@ -16,7 +16,7 @@ const PlanTrip = () => {
         </div>
         <div className="plan-trip__option">
           <img src="" alt="operator icon" className="plan-trip__image" />
-          <h2 className="plan-trip__option-title">Contact Operator</h2>
+          <h1 className="plan-trip__option-title">Contact Operator</h1>
           <p className="plan-trip__option-description">
             Our knowledgeable and friendly <br />
             operators are always ready to help <br />

@@ -1,4 +1,4 @@
-import Car_Data from "./CarData";
+import Car_Data from "../store/CarData";
 import { useState } from "react";
 
 const PickCar = () => {

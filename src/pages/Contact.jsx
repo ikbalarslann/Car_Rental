@@ -1,5 +1,5 @@
 import HeroPages from "../components/HeroPages";
-import ContactComponent from "../components/ContactComponent";
+import ContactComponent from "../widgets/ContactComponent";
 import Banner from "../components/Banner";
 
 const Contact = () => {

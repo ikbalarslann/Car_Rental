@@ -1,5 +1,5 @@
 import HeroPages from "../components/HeroPages";
-import OurTeamComponent from "../components/OurTeamComponent";
+import OurTeamComponent from "../widgets/OurTeamComponent";
 import Banner from "../components/Banner";
 
 const OurTeam = () => {

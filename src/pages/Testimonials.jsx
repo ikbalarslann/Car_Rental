@@ -1,6 +1,6 @@
 import HeroPages from "../components/HeroPages";
 import Banner from "../components/Banner";
-import Testimonial from "../components/Testimonial";
+import Testimonial from "../widgets/Testimonial";
 
 const Testimonials = () => {
   return (
