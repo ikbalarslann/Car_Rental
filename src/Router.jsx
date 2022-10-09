@@ -3,20 +3,20 @@ import ErrorPage from "./pages/ErrorPage";
 import User from "./pages/user/User";
 import SignIn from "./pages/user/SignIn";
 import Register from "./pages/user/Register";
-import Pages from "./pages/Pages";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Vehicles from "./pages/Vehicles";
 import Testimonials from "./pages/Testimonials";
 import OurTeam from "./pages/OurTeam";
 import Contact from "./pages/Contact";
-import Root from "./pages/Root";
+import Default from "./layouts/Default";
+import PagesDefault from "./layouts/PagesDefault";
 
 const Router = () => {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <Root />,
+      element: <Default />,
       errorElement: <ErrorPage />,
       children: [
         { index: true, element: <Home /> },
@@ -30,7 +30,7 @@ const Router = () => {
         },
         {
           path: "pages/",
-          element: <Pages />,
+          element: <PagesDefault />,
           children: [
             { path: "home", element: <Home /> },
             { path: "about", element: <About /> },

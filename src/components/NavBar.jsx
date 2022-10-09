@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-const NavBar = () => {
+
+const NavBar = ({ setCurrentPage }) => {
   return (
     <div className="nav">
       <div className="nav__logo">
@@ -8,12 +9,30 @@ const NavBar = () => {
         </Link>
       </div>
       <div className="nav__pages">
-        <Link to="/pages/home">Home</Link>
-        <Link to="/pages/about">About</Link>
-        <Link to="/pages/vehicles">Vehicle Models</Link>
-        <Link to="/pages/testimonials">Testimonials</Link>
-        <Link to="/pages/ourTeam">Our Team</Link>
-        <Link to="/pages/contact">Contact</Link>
+        <Link to="/pages/home" onClick={() => setCurrentPage("Home")}>
+          Home
+        </Link>
+        <Link to="/pages/about" onClick={() => setCurrentPage("About")}>
+          About
+        </Link>
+        <Link
+          to="/pages/vehicles"
+          onClick={() => setCurrentPage(" Vehicle Models")}
+        >
+          Vehicle Models
+        </Link>
+        <Link
+          to="/pages/testimonials"
+          onClick={() => setCurrentPage("Testimonials")}
+        >
+          Testimonials
+        </Link>
+        <Link to="/pages/ourTeam" onClick={() => setCurrentPage("Our Team")}>
+          Our Team
+        </Link>
+        <Link to="/pages/contact" onClick={() => setCurrentPage("Contact")}>
+          Contact
+        </Link>
       </div>
       <div className="nav__user">
         <Link to="/user/signIn">Sign In</Link>
