@@ -1,24 +1,6 @@
-import HarryPoter from "../assets/img/testomonials/pfp1.jpg";
-import RonRizzly from "../assets/img/testomonials/pfp2.jpg";
+import Testomonial_Data from "../store/TestomonialData";
 
 const Testimonial = () => {
-  const testomonialData = [
-    {
-      name: "Harry Poter",
-      location: "Istanbul",
-      img: HarryPoter,
-      review:
-        "We rented a car from this website and had an amazing experience! The booking was easy and the rental rates were very affordable. ",
-    },
-    {
-      name: "Ron Rizzy",
-      location: "Ankara",
-      img: RonRizzly,
-      review:
-        "The car was in great condition and made our trip even better. Highly recommend for this car rental website!",
-    },
-  ];
-
   return (
     <div className="testomonial">
       <h2 className="testomonial__title">hey i am Testimonial component</h2>
@@ -32,7 +14,7 @@ const Testimonial = () => {
         their positive experiences with you.
       </p>
       <div>
-        {testomonialData.map((element, index) => (
+        {Testomonial_Data.map((element, index) => (
           <div key={index} className="testomonial-item">
             <p className="testomonial-item__review">{element.review}</p>
             <img
