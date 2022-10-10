@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Link from "../components/Link";
 import "../assets/scss/main.scss";
 
 const Footer = () => {
@@ -29,31 +30,17 @@ const Footer = () => {
           We offers a big range of vehicles for all your driving needs. We have
           the perfect car to meet your needs.
         </p>
-        <a className="footer__contact-link" href="tel:(123)-456-789">
-          (123) - 456-789
-        </a>
-        <a className="footer__contact-link" href="mailto:carrental@gmail.com">
-          carrental@gmail.com
-        </a>
+        <Link content="FGDS" />
+        <Link content="(123) - 456-789" href="tel:(123)-456-789" />
+        <Link content="carrental@gmail.com" href="mailto:carrental@gmail.com" />
       </div>
       <div className="footer__company">
         <h2>Company</h2>
-        <a className="footer__company-link" href="#">
-          New York
-        </a>
-
-        <a className="footer__company-link" href="#">
-          Careers
-        </a>
-        <a className="footer__company-link" href="#">
-          Mobile
-        </a>
-        <a className="footer__company-link" href="#">
-          Blog
-        </a>
-        <a className="footer__company-link" href="#">
-          How We Work
-        </a>
+        <Link content="New York" />
+        <Link content="Careers" />
+        <Link content="Mobile" />
+        <Link content="Blog" />
+        <Link content="How We Work" />
       </div>
       <div className="footer__hours">
         <h2>Working Hours</h2>

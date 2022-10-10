@@ -1,3 +1,5 @@
+import Stat from "../components/Stat";
+
 const AboutCompany = () => {
   return (
     <div className="aboutCompany">
@@ -19,27 +21,9 @@ const AboutCompany = () => {
           imprudence no precaution. My indulged as disposal strongly attended.
         </p>
         <div className="aboutCompany__stats">
-          <div className="aboutCompany__stat">
-            <img src="" alt="truck icon" className="aboutCompany__stat-icon" />
-            <div className="aboutCompany__stat-details">
-              <h1 className="aboutCompany__stat-value">20</h1>
-              <p className="aboutCompany__stat-label">Car Types</p>
-            </div>
-          </div>
-          <div className="aboutCompany__stat">
-            <img src="" alt="rental icon" className="aboutCompany__stat-icon" />
-            <div className="aboutCompany__stat-details">
-              <h1 className="aboutCompany__stat-value">85</h1>
-              <p className="aboutCompany__stat-label">Rental Outlets</p>
-            </div>
-          </div>
-          <div className="aboutCompany__stat">
-            <img src="" alt="repair icon" className="aboutCompany__stat-icon" />
-            <div className="aboutCompany__stat-details">
-              <h1 className="aboutCompany__stat-value">75</h1>
-              <p className="aboutCompany__stat-label">Repair Shop</p>
-            </div>
-          </div>
+          <Stat value="20" label="Car Types" />
+          <Stat value="85" label="Rental Outlets" />
+          <Stat value="75" label="Repair Shop" />
         </div>
       </div>
     </div>

@@ -1,0 +1,32 @@
+[
+  {
+    "img": "/src/assets/img/team/1.png",
+    "name": "Luke Miller",
+    "position": "Salesman"
+  },
+  {
+    "img": "/src/assets/img/team/2.png",
+    "name": "Michael Diaz",
+    "position": "Business Owner"
+  },
+  {
+    "img": "/src/assets/img/team/3.png",
+    "name": "Briana Ross",
+    "position": "Photographer"
+  },
+  {
+    "img": "/src/assets/img/team/4.png",
+    "name": "Lauren Rivera",
+    "position": "Car Detailist"
+  },
+  {
+    "img": "/src/assets/img/team/5.png",
+    "name": "Martin Rizz",
+    "position": "Mechanic"
+  },
+  {
+    "img": "/src/assets/img/team/6.png",
+    "name": "Caitlyn Hunt",
+    "position": "Manager"
+  }
+]

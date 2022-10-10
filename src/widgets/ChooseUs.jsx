@@ -1,3 +1,5 @@
+import Card from "../components/Card";
+import Button from "../components/Button";
 const ChooseUs = () => {
   return (
     <div className="chooseUs">
@@ -15,39 +17,25 @@ const ChooseUs = () => {
           the bank. Our deals are designed to give you the ultimate renting
           experience, so don't miss out on your chance to save big.
         </p>
-        <button className="chooseUs__button">Find Details</button>
+
+        <Button content="Find Details" />
       </div>
       <div className="chooseUs__features">
-        <div className="chooseUs__feature">
-          <img src="" alt="car icon" className="chooseUs__icon" />
-          <div className="chooseUs__feature-content">
-            <h3 className="chooseUs__feature-title">Cross Country Drive</h3>
-            <p className="chooseUs__feature-description">
-              Take your driving experience to the next level with our top-notch
-              vehicles for your cross-country adventures.
-            </p>
-          </div>
-        </div>
-        <div className="chooseUs__feature">
-          <img src="" alt="coin icon" className="chooseUs__icon" />
-          <div className="chooseUs__feature-content">
-            <h3 className="chooseUs__feature-title">All Inclusive Pricing</h3>
-            <p className="chooseUs__feature-description">
-              Get everything you need in one convenient, transparent price with
-              our all-inclusive pricing policy.
-            </p>
-          </div>
-        </div>
-        <div className="chooseUs__feature">
-          <img src="" alt="holding coin icon" className="chooseUs__icon" />
-          <div className="chooseUs__feature-content">
-            <h3 className="chooseUs__feature-title">No Hidden Charges</h3>
-            <p className="chooseUs__feature-description">
-              Enjoy peace of mind with our no hidden charges policy. We believe
-              in transparent and honest pricing.
-            </p>
-          </div>
-        </div>
+        <Card
+          title="Cross Country Drive"
+          desc="Take your driving experience to the next level with our top-notch
+              vehicles for your cross-country adventures."
+        />
+        <Card
+          title="All Inclusive Pricing"
+          desc=" Get everything you need in one convenient, transparent price with
+              our all-inclusive pricing policy."
+        />
+        <Card
+          title="No Hidden Charges"
+          desc="Enjoy peace of mind with our no hidden charges policy. We believe
+              in transparent and honest pricing."
+        />
       </div>
     </div>
   );

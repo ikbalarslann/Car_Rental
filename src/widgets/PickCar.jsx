@@ -21,42 +21,14 @@ const PickCar = () => {
       </p>
       <div className="pick__choose">
         <div className="pick__choose-choose">
-          <div
-            className="pick__choose-option"
-            onClick={() => handleCarSelection("Audi A1 S-Line")}
-          >
-            Audi A1 S-Line
-          </div>
-          <div
-            className="pick__choose-option"
-            onClick={() => handleCarSelection("WW Golf 6")}
-          >
-            WW Golf 6
-          </div>
-          <div
-            className="pick__choose-option"
-            onClick={() => handleCarSelection("Toyota Camry")}
-          >
-            Toyota Camry
-          </div>
-          <div
-            className="pick__choose-option"
-            onClick={() => handleCarSelection("BMW 320 ModernLine")}
-          >
-            BMW 320 ModernLine
-          </div>
-          <div
-            className="pick__choose-option"
-            onClick={() => handleCarSelection("Mercedes-Benz GLK")}
-          >
-            Mercedes-Benz GLK
-          </div>
-          <div
-            className="pick__choose-option"
-            onClick={() => handleCarSelection("VW Passat CC")}
-          >
-            VW Passat CC
-          </div>
+          {Car_Data.map((e) => (
+            <div
+              className="pick__choose-option"
+              onClick={() => handleCarSelection(e.name)}
+            >
+              {e.name}
+            </div>
+          ))}
         </div>
         <img src={car && car.img} alt="car image" />
         <div className="pick__choose-info">
