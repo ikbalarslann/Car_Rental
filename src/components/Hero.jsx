@@ -1,19 +1,20 @@
+import SubTitle from "./SubTitle";
+import Title from "./Title";
+import Desc from "./Desc";
+import Button from "./Button";
 const Hero = () => {
   return (
     <div className="hero">
       <div className="hero__ad">
-        <h2 className="hero__title">Hey, I am hero component</h2>
-        <h2 className="hero__subtitle">Plan your trip now</h2>
-        <h1 className="hero__main-title">
-          Save <b className="hero__highlight">big</b> with our car rental
-        </h1>
-        <p className="hero__description">
-          Rent the car of your dreams. Unbeatable prices. Unlimited miles.
+        <SubTitle subtitle="Plan your trip now" />
+        <Title title="Save big with our car rental" />
+        <Desc
+          desc="Rent the car of your dreams. Unbeatable prices. Unlimited miles.
           <br />
-          Flexible pick-up options and much more.
-        </p>
-        <button className="hero__button">Book Ride</button>
-        <button className="hero__button">Learn More</button>
+          Flexible pick-up options and much more."
+        />
+        <Button content="Book Ride" />
+        <Button content="Learn More" />
       </div>
       <div className="hero__img">
         <img
