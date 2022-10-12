@@ -6,7 +6,7 @@ import Banner from "../components/Banner";
 import ChooseUs from "../widgets/ChooseUs";
 import Testimonials from "../widgets/Testimonial";
 import Faq from "../widgets/Faq";
-import Downland from "../components/Download";
+import Downland from "../widgets/Download";
 
 const Home = () => {
   return (

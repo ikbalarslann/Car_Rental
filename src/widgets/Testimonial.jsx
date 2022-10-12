@@ -1,18 +1,19 @@
 import Testomonial_Data from "../store/TestomonialData";
-
+import SubTitle from "../components/SubTitle";
+import Title from "../components/Title";
+import Desc from "../components/Desc";
 const Testimonial = () => {
   return (
     <div className="testomonial">
-      <h2 className="testomonial__title">hey i am Testimonial component</h2>
-      <h4 className="testomonial__subtitle">Reviewed by People</h4>
-      <h1 className="testomonial__main-title">Client's Testimonials</h1>
-      <p className="testomonial__description">
-        Discover the positive impact we've made on our clients by reading
+      <SubTitle subtitle="Reviewed by People" />
+      <Title title="Client's Testimonials" />
+      <Desc
+        desc=" Discover the positive impact we've made on our clients by reading
         through their <br />
         testimonials. Our clients have experienced our service and results, and
         they're eager to share <br />
-        their positive experiences with you.
-      </p>
+        their positive experiences with you."
+      />
       <div>
         {Testomonial_Data.map((element, index) => (
           <div key={index} className="testomonial-item">

@@ -1,5 +1,8 @@
 import Car_Data from "../store/CarData";
 import { useState } from "react";
+import SubTitle from "../components/SubTitle";
+import Title from "../components/Title";
+import Desc from "../components/Desc";
 
 const PickCar = () => {
   const [selectedCar, setSelectedCar] = useState("Audi A1 S-Line");
@@ -12,13 +15,13 @@ const PickCar = () => {
 
   return (
     <div className="pick">
-      <h2>hey i am Pick Car component</h2>
-      <h3>Vehicle Models</h3>
-      <h1>Our rental fleet</h1>
-      <p>
-        choose from a variety of our amazing vehicles to rent for your next{" "}
-        <br /> adventure or business trip
-      </p>
+      <SubTitle subtitle="Vehicle Models" />
+      <Title title="Our rental fleet" />
+      <Desc
+        desc=" choose from a variety of our amazing vehicles to rent for your next
+        <br /> adventure or business trip"
+      />
+
       <div className="pick__choose">
         <div className="pick__choose-choose">
           {Car_Data.map((e) => (

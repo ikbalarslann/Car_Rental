@@ -1,5 +1,8 @@
 import Faq_Data from "../store/FaqData";
 import React, { useState } from "react";
+import SubTitle from "../components/SubTitle";
+import Title from "../components/Title";
+import Desc from "../components/Desc";
 
 const Faq = () => {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -14,14 +17,14 @@ const Faq = () => {
 
   return (
     <div className="faq">
-      <h2 className="faq__title">hey i am Faq component</h2>
-      <h4 className="faq__subtitle">FAQ</h4>
-      <h1 className="faq__main-title">Frequently Asked Questions</h1>
-      <p className="faq__description">
-        Frequently Asked Questions About the Car Rental Booking Process on Our
+      <SubTitle subtitle="FAQ" />
+      <Title title="Frequently Asked Questions" />
+      <Desc
+        desc=" Frequently Asked Questions About the Car Rental Booking Process on Our
         Website: Answers to <br />
-        Common Concerns and Inquiries.
-      </p>
+        Common Concerns and Inquiries."
+      />
+
       <div>
         {Faq_Data.map((faq, index) => (
           <div key={index} className="faq-item">
