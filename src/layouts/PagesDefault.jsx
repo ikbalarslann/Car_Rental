@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
 import { useOutletContext } from "react-router-dom";
-import HeroPages from "../components/HeroPages";
+import HeroPages from "../widgets/HeroPages";
 import Banner from "../components/Banner";
 
 const PagesDefault = () => {

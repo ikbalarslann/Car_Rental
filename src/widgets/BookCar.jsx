@@ -2,6 +2,7 @@ import { useState } from "react";
 import ReactDatePicker from "react-datepicker";
 import Modal from "../components/Modal";
 import Car_Data from "../store/CarData";
+import Title from "../components/Title";
 
 const BookCar = () => {
   const [modal, setModal] = useState(false);
@@ -36,8 +37,7 @@ const BookCar = () => {
 
   return (
     <div className="book-car">
-      <h2 className="book-car__title">Hey, I am Book Car component</h2>
-      <h1>Book a car</h1>
+      <Title title="Book a Car" />
       <form className="book-car__form" onSubmit={handleSubmit}>
         <div>
           <label className="book-car__label" htmlFor="carType">
