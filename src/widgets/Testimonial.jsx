@@ -23,8 +23,8 @@ const Testimonial = () => {
               alt="Client"
               className="testomonial-item__image"
             />
-            <h4 className="testomonial-item__name">{element.name}</h4>
-            <p className="testomonial-item__location">{element.location}</p>
+            <SubTitle subtitle={element.name} />
+            <Desc desc={element.location} />
           </div>
         ))}
       </div>

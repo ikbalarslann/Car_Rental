@@ -1,6 +1,5 @@
 import { useState } from "react";
 import Link from "../components/Link";
-import "../assets/scss/main.scss";
 
 const Footer = () => {
   const [formData, setFormData] = useState({

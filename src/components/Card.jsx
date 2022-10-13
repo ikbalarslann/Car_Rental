@@ -1,4 +1,6 @@
 import React from "react";
+import SubTitle from "./SubTitle";
+import Desc from "./Desc";
 
 const Card = ({ title, desc }) => {
   const descWithLineBreaks = desc.split(/<br\s*\/?>/).map((item, index) => (
@@ -12,8 +14,8 @@ const Card = ({ title, desc }) => {
     <div className="chooseUs__feature">
       <img src="" alt="icon" className="chooseUs__icon" />
       <div className="chooseUs__feature-content">
-        <h3 className="chooseUs__feature-title">{title}</h3>
-        <p className="chooseUs__feature-description">{descWithLineBreaks}</p>
+        <SubTitle subtitle={title} />
+        {descWithLineBreaks}
       </div>
     </div>
   );

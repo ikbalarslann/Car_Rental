@@ -1,15 +1,18 @@
 import React from "react";
 
 const Desc = ({ desc }) => {
-  const descWithLineBreaks = desc.split(/<br\s*\/?>/).map((item, index) => (
-    <React.Fragment key={index}>
-      {item}
-      {index < desc.split(/<br\s*\/?>/).length - 1 && <br />}
-    </React.Fragment>
-  ));
+  const descParts = desc.split(/<br\s*\/?>/);
+
   return (
     <div>
-      <p className="hero__description">{descWithLineBreaks}</p>
+      <p className="hero__description">
+        {descParts.map((part, index) => (
+          <React.Fragment key={index}>
+            {part}
+            {index < descParts.length - 1 && <br />}
+          </React.Fragment>
+        ))}
+      </p>
     </div>
   );
 };

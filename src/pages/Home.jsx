@@ -11,7 +11,6 @@ import Downland from "../widgets/Download";
 const Home = () => {
   return (
     <div>
-      <h1>hey i am home page</h1>
       <Hero />
       <BookCar />
       <PlanTrip />

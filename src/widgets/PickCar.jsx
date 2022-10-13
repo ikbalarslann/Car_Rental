@@ -26,6 +26,7 @@ const PickCar = () => {
         <div className="pick__choose-choose">
           {Car_Data.map((e) => (
             <div
+              key={e.id}
               className="pick__choose-option"
               onClick={() => handleCarSelection(e.name)}
             >
