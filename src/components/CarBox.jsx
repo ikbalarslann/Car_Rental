@@ -1,14 +1,33 @@
+import React, { useState } from "react";
 import Car_Data from "../store/CarData";
 import { Link } from "react-router-dom";
 import Title from "./Title";
 import SubTitle from "./SubTitle";
 import Desc from "./Desc";
+import Modal from "./Modal";
 
 const CarBox = () => {
+  const [carModals, setCarModals] = useState({});
+
+  const openModal = (carName) => {
+    setCarModals((prevModals) => ({
+      ...prevModals,
+      [carName]: true,
+    }));
+  };
+
+  const closeModal = (carName) => {
+    setCarModals((prevModals) => ({
+      ...prevModals,
+      [carName]: false,
+    }));
+  };
+
   return (
     <div className="carBox">
       {Car_Data.map((element) => {
         const title = "$" + element.price;
+        const carName = element.name;
         return (
           <div key={element.id} className="carBox__item">
             <img src={element.img} alt="car image" className="carBox__image" />
@@ -23,9 +42,17 @@ const CarBox = () => {
               <SubTitle subtitle={element.doors} />
               <SubTitle subtitle={element.fuel} />
             </div>
-            <Link to="/" className="carBox__book-button">
-              Book Ride
-            </Link>
+
+            <button
+              className="book-car__form-button"
+              type="button"
+              onClick={() => openModal(carName)}
+            >
+              Search
+            </button>
+            {carModals[carName] && (
+              <Modal setModal={() => closeModal(carName)} carName={carName} />
+            )}
           </div>
         );
       })}
