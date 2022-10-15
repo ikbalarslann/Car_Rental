@@ -9,7 +9,7 @@ const Title = ({ title }) => {
   ));
   return (
     <div>
-      <h1 className="hero__main-title">{titleWithLineBreaks}</h1>
+      <h1 className="title">{titleWithLineBreaks}</h1>
     </div>
   );
 };

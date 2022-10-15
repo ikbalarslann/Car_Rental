@@ -1,6 +1,6 @@
 import Card from "../components/Card";
-import SubTitle from "../components/SubTitle";
-import Title from "../components/Title";
+import SubTitle from "../components/chunks/SubTitle";
+import Title from "../components/chunks/Title";
 const PlanTrip = () => {
   return (
     <div className="plan-trip">

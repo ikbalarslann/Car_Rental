@@ -1,7 +1,7 @@
-import SubTitle from "./SubTitle";
-import Title from "./Title";
-import Desc from "./Desc";
-import Button from "./Button";
+import SubTitle from "./chunks/SubTitle";
+import Title from "./chunks/Title";
+import Desc from "./chunks/Desc";
+import Button from "./chunks/Button";
 const Hero = () => {
   return (
     <div className="hero">
@@ -13,8 +13,10 @@ const Hero = () => {
           <br />
           Flexible pick-up options and much more."
         />
-        <Button content="Book Ride" />
-        <Button content="Learn More" />
+        <div className="hero__buttons">
+          <Button content="Book Ride" />
+          <Button content="Learn More" />
+        </div>
       </div>
       <div className="hero__img">
         <img

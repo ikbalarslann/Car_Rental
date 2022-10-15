@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import Car_Data from "../store/CarData";
 import { Link } from "react-router-dom";
-import Title from "./Title";
-import SubTitle from "./SubTitle";
-import Desc from "./Desc";
+import Title from "./chunks/Title";
+import SubTitle from "./chunks/SubTitle";
+import Desc from "./chunks/Desc";
 import Modal from "./Modal";
 
 const CarBox = () => {

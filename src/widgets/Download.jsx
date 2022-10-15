@@ -1,5 +1,5 @@
-import Title from "../components/Title";
-import Desc from "../components/Desc";
+import Title from "../components/chunks/Title";
+import Desc from "../components/chunks/Desc";
 
 const Downland = () => {
   return (

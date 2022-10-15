@@ -1,7 +1,7 @@
 import Testomonial_Data from "../store/TestomonialData";
-import SubTitle from "../components/SubTitle";
-import Title from "../components/Title";
-import Desc from "../components/Desc";
+import SubTitle from "../components/chunks/SubTitle";
+import Title from "../components/chunks/Title";
+import Desc from "../components/chunks/Desc";
 const Testimonial = () => {
   return (
     <div className="testomonial">

@@ -1,6 +1,10 @@
 import Car_Data from "../store/CarData";
 import { useState } from "react";
 import ReactDatePicker from "react-datepicker";
+import Title from "../components/chunks/Title";
+import SubTitle from "../components/chunks/SubTitle";
+import Desc from "../components/chunks/Desc";
+import Button from "./chunks/Button";
 
 const Modal = ({
   setModal,
@@ -41,22 +45,20 @@ const Modal = ({
   return (
     <div className="modal-container">
       <div className="modal">
-        <h1 className="modal__title">Complete Reservation</h1>
-        <button onClick={() => setModal(false)} className="modal__close-button">
-          X
-        </button>
+        <Title title="Complete Reservation" />
+        <Button onclick={() => setModal(false)} content="X" />
+
         <div className="modal__info">
-          <h2 className="modal__info-title">
-            Upon completing this reservation enquiry, you will receive:
-          </h2>
-          <p className="modal__info-text">
-            Your rental voucher to produce on arrival at the rental desk and a
-            toll-free customer support number.
-          </p>
+          <SubTitle subtitle="Upon completing this reservation enquiry, you will receive:" />
+          <Desc
+            desc="Your rental voucher to produce on arrival at the rental desk and a
+            toll-free customer support number."
+          />
         </div>
         <div className="modal__location-date">
           <div className="modal__location-date-item">
-            <h2 className="modal__sub-title">Location & Date</h2>
+            <SubTitle subtitle="Location & Date" />
+
             <form className="book-car__form" onSubmit={handleOnSubmit}>
               <div>
                 <label className="book-car__label" htmlFor="carType">
@@ -146,8 +148,8 @@ const Modal = ({
           </div>
           <div className="modal__car">
             <div className="modal__car-info">
-              <p className="modal__label">Car -</p>
-              <p className="modal__value">{carName}</p>
+              <SubTitle subtitle="Car-" />
+              <Desc desc={carName} />
             </div>
             <img
               src={car && car.img}
@@ -158,7 +160,8 @@ const Modal = ({
         </div>
         <hr className="modal__hr" />
         <div className="modal__personal-info">
-          <h2 className="modal__sub-title">Personal Information</h2>
+          <SubTitle subtitle="Personal Information" />
+
           <form onSubmit={handleOnSubmit}>
             <div>
               <label htmlFor="firstName">First Name:</label>
@@ -190,12 +193,7 @@ const Modal = ({
             </label>
           </form>
         </div>
-        <button
-          onClick={() => setModal(false)}
-          className="modal__reserve-button"
-        >
-          Reserve Now
-        </button>
+        <Button onclick={() => setModal(false)} content="Reserve Now" />
       </div>
     </div>
   );

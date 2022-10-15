@@ -1,31 +1,26 @@
+import SubTitle from "../components/chunks/SubTitle";
+import Desc from "../components/chunks/Desc";
+import Link from "../components/chunks/Link";
+
 const ContactComponent = () => {
   const handleSubmit = (e) => {
     e.preventSubmit;
   };
   return (
     <div className="contactComponent">
-      <h1 className="contactComponent__title">Hey, I am contact component</h1>
       <div className="contactComponent__info">
-        <h2 className="contactComponent__info-title">
-          Need additional information?
-        </h2>
-        <p className="contactComponent__info-description">
-          A multifaceted professional skilled in multiple fields of research,
+        <SubTitle subtitle=" Need additional information?" />
+        <Desc
+          desc=" A multifaceted professional skilled in multiple fields of research,
           development as well as a learning specialist. Over 15 years of
-          experience.
-        </p>
-        <a href="tel:(123) 456-7869" className="contactComponent__info-phone">
-          (123) 456-7869
-        </a>
-        <a
+          experience."
+        />
+        <Link content="(123) 456-7869" href="tel:(123) 456-7869" />
+        <Link
+          content="carrental@carmail.com"
           href="mailto:carrental@carmail.com"
-          className="contactComponent__info-email"
-        >
-          carrental@carmail.com
-        </a>
-        <a href="#" className="contactComponent__info-location">
-          Istanbul/Turkey
-        </a>
+        />
+        <Link content="Istanbul/Turkey" />
       </div>
       <div className="contactComponent__form">
         <form onSubmit={handleSubmit}>

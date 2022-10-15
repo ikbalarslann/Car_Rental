@@ -1,6 +1,5 @@
 import React from "react";
-import SubTitle from "./SubTitle";
-import Desc from "./Desc";
+import SubTitle from "./chunks/SubTitle";
 
 const Card = ({ title, desc }) => {
   const descWithLineBreaks = desc.split(/<br\s*\/?>/).map((item, index) => (

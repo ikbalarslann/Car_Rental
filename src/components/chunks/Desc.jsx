@@ -5,7 +5,7 @@ const Desc = ({ desc }) => {
 
   return (
     <div>
-      <p className="hero__description">
+      <p className="description">
         {descParts.map((part, index) => (
           <React.Fragment key={index}>
             {part}

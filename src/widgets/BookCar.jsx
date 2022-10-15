@@ -2,7 +2,8 @@ import { useState } from "react";
 import ReactDatePicker from "react-datepicker";
 import Modal from "../components/Modal";
 import Car_Data from "../store/CarData";
-import Title from "../components/Title";
+import Title from "../components/chunks/Title";
+import Button from "../components/chunks/Button";
 
 const BookCar = () => {
   const [modal, setModal] = useState(false);
@@ -124,13 +125,12 @@ const BookCar = () => {
           />
         </div>
         <div>
-          <button
-            className="book-car__form-button"
+          <Button
             type="submit"
-            onClick={() => setModal(true)}
-          >
-            Search
-          </button>
+            onclick={() => setModal(true)}
+            content="Search"
+          />
+
           {modal && (
             <Modal
               setModal={setModal}

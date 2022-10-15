@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Link from "../components/Link";
+import Link from "../components/chunks/Link"; // Make sure to import the Link component correctly.
 
 const Footer = () => {
   const [formData, setFormData] = useState({
@@ -26,7 +26,7 @@ const Footer = () => {
           <strong>Car</strong> Rental
         </h2>
         <p>
-          We offers a big range of vehicles for all your driving needs. We have
+          We offer a big range of vehicles for all your driving needs. We have
           the perfect car to meet your needs.
         </p>
         <Link content="FGDS" />

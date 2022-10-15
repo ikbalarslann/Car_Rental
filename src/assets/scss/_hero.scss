@@ -1,12 +1,13 @@
 @import "./mixins";
 
 .hero {
+  @include fit;
   @include flexCenter(row);
   padding: 20px;
   background-color: #f4f4f4;
 
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  //background-image: url("	https://car-rental-ten.vercel.app/static/media/main-car.9b30faa59387879fa060.png");
+
   background-size: cover;
   background-position: center;
   &__ad {
@@ -15,26 +16,12 @@
     text-align: left;
   }
 
-  &__subtitle {
-    font-size: 20px;
-    color: #555;
-    margin-top: 10px;
-  }
-
-  &__main-title {
-    font-size: 36px;
-    color: #000;
-    margin-top: 20px;
-  }
-
   &__highlight {
     color: #ff9900;
   }
-
-  &__description {
-    font-size: 16px;
-    color: #666;
-    margin-top: 20px;
+  &__buttons {
+    display: flex;
+    gap: 5px;
   }
 
   &__button {
@@ -55,17 +42,7 @@
     flex: 1;
     text-align: center;
     position: relative;
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.4);
-      z-index: 1;
-      border-radius: 10px;
-    }
+    padding-right: 10px;
   }
 
   &__image {
@@ -73,21 +50,3 @@
     height: auto;
   }
 }
-
-// @media (max-width: 768px) {
-//   /* Adjust the layout for smaller screens */
-//   .hero {
-//     flex-direction: column;
-//     text-align: center;
-//   }
-
-//   .hero__ad {
-//     order: 2;
-//     padding: 20px;
-//   }
-
-//   .hero__img {
-//     order: 1;
-//     margin-bottom: 20px;
-//   }
-// }

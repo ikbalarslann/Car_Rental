@@ -32,7 +32,6 @@ const Router = () => {
           path: "pages/",
           element: <PagesDefault />,
           children: [
-            { path: "home", element: <Home /> },
             { path: "about", element: <About /> },
             { path: "vehicles", element: <Vehicles /> },
             { path: "testimonials", element: <Testimonials /> },

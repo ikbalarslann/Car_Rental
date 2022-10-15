@@ -1,5 +1,5 @@
-import Title from "./Title";
-import Desc from "./Desc";
+import Title from "./chunks/Title";
+import Desc from "./chunks/Desc";
 
 const Stat = ({ value, label }) => {
   return (

@@ -1,6 +1,6 @@
 import Team_Data from "../store/TeamData";
-import SubTitle from "../components/SubTitle";
-import Desc from "../components/Desc";
+import SubTitle from "../components/chunks/SubTitle";
+import Desc from "../components/chunks/Desc";
 
 const OurTeamComponent = () => {
   return (

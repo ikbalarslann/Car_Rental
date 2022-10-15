@@ -1,6 +1,6 @@
 const Link = ({ content, href = "#" }) => {
   return (
-    <a className="footer__company-link" href={href}>
+    <a className="link" href={href}>
       {content}
     </a>
   );
