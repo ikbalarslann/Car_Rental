@@ -14,8 +14,6 @@ const SignIn = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const { email, password } = formData;
-
-    console.log(`Email: ${email}, Password: ${password}`);
   };
 
   return (

@@ -1,7 +1,18 @@
+import { useState } from "react";
+import UserModal from "../../components/UserModal";
+import Button from "../../components/chunks/Button";
+
 const Register = () => {
+  const [modal, setModal] = useState(false);
+
   return (
     <div>
-      <h1>hey i am register page</h1>
+      <Button
+        type="submit"
+        onclick={() => setModal(true)}
+        content="Open Modal"
+      />
+      {modal && <UserModal setModal={setModal} />}
     </div>
   );
 };

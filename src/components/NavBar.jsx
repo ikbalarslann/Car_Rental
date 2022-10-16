@@ -1,8 +1,11 @@
 import { Link } from "react-router-dom";
+import Button from "./chunks/Button";
+import UserModal from "./UserModal";
 import { useState } from "react";
 
 const NavBar = ({ setCurrentPage }) => {
   const [isActive, setIsActive] = useState(false);
+  const [modal, setModal] = useState(false);
 
   const linksClass = isActive ? "nav__links active" : "nav__links";
 
@@ -76,17 +79,15 @@ const NavBar = ({ setCurrentPage }) => {
           </li>
 
           <li className="nav__links__ul-li">
-            <Link to="/user/signIn" className="nav__user-link">
-              Sign In
-            </Link>
-          </li>
-          <li className="nav__links__ul-li">
-            <Link to="/user/register" className="nav__user-link">
-              Register
-            </Link>
+            <Button
+              type="submit"
+              onclick={() => setModal(true)}
+              content="User"
+            />
           </li>
         </ul>
       </div>
+      {modal && <UserModal setModal={setModal} />}
     </div>
   );
 };
