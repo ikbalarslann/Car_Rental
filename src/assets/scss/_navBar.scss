@@ -5,8 +5,11 @@
   padding-top: 3vh;
   padding-bottom: 3vh;
   @include flexCenter(row);
-  background-color: orange;
+  background-color: rgba(255, 166, 0, 0);
   justify-content: space-evenly;
+  &__page-link:hover {
+    color: orange;
+  }
   &__logo {
     &:hover {
       color: rgb(214, 215, 218);
@@ -16,7 +19,20 @@
     @include flexCenter(row);
     gap: 3vh;
     &-li:hover {
-      background-color: gray;
+      color: orange;
+    }
+  }
+  &__user-buton {
+    background-color: #f90808;
+    color: #5c5a5a;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    &:hover {
+      background-color: #ed5118;
     }
   }
 }
@@ -41,7 +57,7 @@
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 1000px) {
   .nav {
     flex-direction: column;
     align-items: flex-start;

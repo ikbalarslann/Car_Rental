@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import Button from "./chunks/Button";
 import UserModal from "./UserModal";
 import { useState } from "react";
 
@@ -79,11 +78,13 @@ const NavBar = ({ setCurrentPage }) => {
           </li>
 
           <li className="nav__links__ul-li">
-            <Button
+            <button
+              className="nav__user-buton"
               type="submit"
-              onclick={() => setModal(true)}
-              content="User"
-            />
+              onClick={() => setModal(true)}
+            >
+              User
+            </button>
           </li>
         </ul>
       </div>
