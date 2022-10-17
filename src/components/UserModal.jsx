@@ -1,7 +1,4 @@
-import React, { useState } from "react"; // Make sure to import React
-import Button from "../components/chunks/Button";
-import Link from "./chunks/Link";
-import Title from "./chunks/Title";
+import React, { useState } from "react";
 
 const UserModal = ({ setModal }) => {
   const [title, setTitle] = useState("Sign In");
@@ -19,49 +16,74 @@ const UserModal = ({ setModal }) => {
 
   return (
     <div className="userModal">
-      <Button onclick={() => setModal(false)} content="X" />
-      <Title title={title} />
+      <button
+        className="userModal__closeButton"
+        onClick={() => setModal(false)}
+      >
+        X
+      </button>
+      <h1 className="userModal__title">{title}</h1>
+
       <div>
         <form className="userModal__form" onSubmit={handleSubmit}>
-          <div>
-            <label htmlFor="email">Email:</label>
+          <div className="userModal__formGroup">
+            <label className="userModal__label" htmlFor="email">
+              Email:
+            </label>
             <input
               type="email"
               id="email"
               name="email"
               value={formData.email}
               onChange={handleInputChange}
+              className="userModal__input"
               required
             />
           </div>
-          <div>
-            <label htmlFor="password">Password:</label>
+          <div className="userModal__formGroup">
+            <label className="userModal__label" htmlFor="password">
+              Password:
+            </label>
             <input
               type="password"
               id="password"
               name="password"
               value={formData.password}
               onChange={handleInputChange}
+              className="userModal__input"
               required
             />
           </div>
-          <div>
-            <Button content={title} />
+          <div className="userModal__formGroup">
+            <button className="userModal__submitButton">{title}</button>
           </div>
         </form>
+
         {title === "Sign In" ? (
-          <div>
+          <div className="userModal__info">
             <p>
-              New to Car Rental?
-              <Link content="Sign Up" onClick={() => setTitle("Sign Up")} />
+              New to Car Rental?{" "}
+              <a
+                className="userModal__link"
+                href="#"
+                onClick={() => setTitle("Sign Up")}
+              >
+                Sign Up
+              </a>
             </p>
             <p>Test Account - carrental@gymail.com / testpassword123</p>
           </div>
         ) : (
-          <div>
+          <div className="userModal__info">
             <p>
               Already have an account?{" "}
-              {<Link content="Sign In" onClick={() => setTitle("Sign In")} />}
+              <a
+                className="userModal__link"
+                href="#"
+                onClick={() => setTitle("Sign In")}
+              >
+                Sign In
+              </a>
             </p>
             <p>(For making a new account go to the Sign Up Page)</p>
           </div>

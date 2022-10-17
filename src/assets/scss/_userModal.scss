@@ -1,21 +1,72 @@
-/* Styles for the modal container */
 .userModal {
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: gray; /* Modal background color */
+  background-color: rgb(250, 149, 7);
   padding: 20px;
   border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Box shadow for the modal */
-  max-width: 400px; /* Adjust as needed */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  max-width: 400px;
   width: 100%;
   text-align: center;
   z-index: 99999;
-}
 
-.userModal__form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  &__closeButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 0.2rem;
+    background-color: red;
+    border: none;
+    font-size: 18px;
+  }
+
+  &__title {
+    text-align: center;
+  }
+
+  &__form {
+    margin-top: 20px;
+  }
+
+  &__formGroup {
+    margin-bottom: 15px;
+  }
+
+  &__label {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  &__input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+  }
+
+  &__submitButton {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+
+    &:hover {
+      background-color: #2980b9;
+    }
+  }
+
+  &__info {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  &__link {
+    color: #3498db;
+    text-decoration: none;
+
+    &:hover {
+      color: #2980b9;
+    }
+  }
 }
