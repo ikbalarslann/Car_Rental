@@ -76,3 +76,44 @@
     height: auto;
   }
 }
+
+.modal__personal-info {
+  margin-top: 20px;
+}
+
+.modal__personal-info-title {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.modal__personal-info-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 15px;
+}
+
+.modal__personal-info-section {
+  grid-row: span 2; /* Each section spans 2 rows */
+}
+
+.modal__personal-info-label {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.modal__personal-info-input {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.modal__personal-info-checkbox-label {
+  grid-column: span 2; /* Span 2 columns */
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.modal__personal-info-checkbox {
+  margin-right: 5px;
+}

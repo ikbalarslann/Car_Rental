@@ -5,7 +5,7 @@
   padding-top: 3vh;
   padding-bottom: 3vh;
   @include flexCenter(row);
-  background-color: rgba(255, 166, 0, 0);
+
   justify-content: space-evenly;
   &__page-link:hover {
     color: orange;

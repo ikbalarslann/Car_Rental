@@ -1,10 +1,6 @@
 import Car_Data from "../store/CarData";
 import { useState } from "react";
 import ReactDatePicker from "react-datepicker";
-import Title from "../components/chunks/Title";
-import SubTitle from "../components/chunks/SubTitle";
-import Desc from "../components/chunks/Desc";
-import Button from "./chunks/Button";
 
 const Modal = ({
   setModal,
@@ -45,20 +41,21 @@ const Modal = ({
   return (
     <div className="modal-container">
       <div className="modal">
-        <Title title="Complete Reservation" />
-        <Button onclick={() => setModal(false)} content="X" />
+        <h1 className="modal__title">Complete Reservation</h1>
+        <button onClick={() => setModal(false)}>X</button>
 
         <div className="modal__info">
-          <SubTitle subtitle="Upon completing this reservation enquiry, you will receive:" />
-          <Desc
-            desc="Your rental voucher to produce on arrival at the rental desk and a
-            toll-free customer support number."
-          />
+          <h2 className="modal__info-title">
+            Upon completing this reservation enquiry, you will receive:
+          </h2>
+          <p className="modal__info-paragraph">
+            Your rental voucher to produce on arrival at the rental desk and a
+            toll-free customer support number.
+          </p>
         </div>
         <div className="modal__location-date">
           <div className="modal__location-date-item">
-            <SubTitle subtitle="Location & Date" />
-
+            <h2 className="modal__location-date-title">Location & Date</h2>
             <form className="book-car__form" onSubmit={handleOnSubmit}>
               <div>
                 <label className="book-car__label" htmlFor="carType">
@@ -148,8 +145,8 @@ const Modal = ({
           </div>
           <div className="modal__car">
             <div className="modal__car-info">
-              <SubTitle subtitle="Car-" />
-              <Desc desc={carName} />
+              <h2>Car-</h2>
+              <p>{carName}</p>
             </div>
             <img
               src={car && car.img}
@@ -160,40 +157,61 @@ const Modal = ({
         </div>
         <hr className="modal__hr" />
         <div className="modal__personal-info">
-          <SubTitle subtitle="Personal Information" />
+          <h2 className="modal__personal-info-title">Personal Information</h2>
 
-          <form onSubmit={handleOnSubmit}>
-            <div>
-              <label htmlFor="firstName">First Name:</label>
-              <input type="text" />
-              <label htmlFor="lastName">Last Name:</label>
-              <input type="text" />
+          <form className="modal__personal-info-form" onSubmit={handleOnSubmit}>
+            <div className="modal__personal-info-section">
+              <label className="modal__personal-info-label" htmlFor="firstName">
+                First Name:
+              </label>
+              <input className="modal__personal-info-input" type="text" />
+              <label className="modal__personal-info-label" htmlFor="lastName">
+                Last Name:
+              </label>
+              <input className="modal__personal-info-input" type="text" />
               <br />
-              <label htmlFor="phone">Phone Number:</label>
-              <input type="text" />
-              <label htmlFor="age">Age:</label>
-              <input type="text" />
+              <label className="modal__personal-info-label" htmlFor="phone">
+                Phone Number:
+              </label>
+              <input className="modal__personal-info-input" type="text" />
+              <label className="modal__personal-info-label" htmlFor="age">
+                Age:
+              </label>
+              <input className="modal__personal-info-input" type="text" />
             </div>
-            <div>
-              <label htmlFor="email">Email:</label>
-              <input type="text" />
+            <div className="modal__personal-info-section">
+              <label className="modal__personal-info-label" htmlFor="email">
+                Email:
+              </label>
+              <input className="modal__personal-info-input" type="text" />
               <br />
-              <label htmlFor="age">Adress:</label>
-              <input type="text" />
+              <label className="modal__personal-info-label" htmlFor="address">
+                Address:
+              </label>
+              <input className="modal__personal-info-input" type="text" />
             </div>
-            <div>
-              <label htmlFor="city">City:</label>
-              <input type="text" />
-              <label htmlFor="zipCode">Zip Code:</label>
-              <input type="text" />
+            <div className="modal__personal-info-section">
+              <label className="modal__personal-info-label" htmlFor="city">
+                City:
+              </label>
+              <input className="modal__personal-info-input" type="text" />
+              <label className="modal__personal-info-label" htmlFor="zipCode">
+                Zip Code:
+              </label>
+              <input className="modal__personal-info-input" type="text" />
             </div>
-            <label>
-              <input type="checkbox" name="checkbox" />
+            <label className="modal__personal-info-checkbox-label">
+              <input
+                className="modal__personal-info-checkbox"
+                type="checkbox"
+                name="checkbox"
+              />
               Please send me latest news and updates
             </label>
           </form>
         </div>
-        <Button onclick={() => setModal(false)} content="Reserve Now" />
+
+        <button onClick={() => setModal(false)}>Reserve Now</button>
       </div>
     </div>
   );

@@ -2,8 +2,6 @@ import { useState } from "react";
 import ReactDatePicker from "react-datepicker";
 import Modal from "../components/Modal";
 import Car_Data from "../store/CarData";
-import Title from "../components/chunks/Title";
-import Button from "../components/chunks/Button";
 
 const BookCar = () => {
   const [modal, setModal] = useState(false);
@@ -38,7 +36,8 @@ const BookCar = () => {
 
   return (
     <div className="book-car">
-      <Title title="Book a Car" />
+      <h1 className="book-car__title">Book a Car</h1>
+
       <form className="book-car__form" onSubmit={handleSubmit}>
         <div>
           <label className="book-car__label" htmlFor="carType">
@@ -125,11 +124,13 @@ const BookCar = () => {
           />
         </div>
         <div>
-          <Button
+          <button
+            className="book-car__button"
             type="submit"
-            onclick={() => setModal(true)}
-            content="Search"
-          />
+            onClick={() => setModal(true)}
+          >
+            Search
+          </button>
 
           {modal && (
             <Modal

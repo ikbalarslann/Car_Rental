@@ -1,60 +1,111 @@
 @import "../../../node_modules/react-datepicker/dist/react-datepicker.css";
 @import "./mixins";
 
+// .book-car {
+//   //max-width: 600px;
+//   width: 100%;
+//   margin: 0 auto;
+//   padding: 20px;
+//   border: 1px solid #ccc;
+//   border-radius: 5px;
+//   background-color: #fff;
+
+//   &__title {
+//     font-size: 24px;
+//     margin-bottom: 10px;
+//   }
+
+//   & h1 {
+//     font-size: 20px;
+//     margin-bottom: 20px;
+//   }
+
+//   &__form {
+//     display: flex;
+//     flex-direction: column;
+//   }
+
+//   &__label {
+//     font-size: 16px;
+//     margin-bottom: 5px;
+//   }
+
+//   &__select,
+//   &__datepicker {
+//     width: 100%;
+//     padding: 10px;
+//     font-size: 16px;
+//     margin-bottom: 15px;
+//     border: 1px solid #ccc;
+//     border-radius: 5px;
+//     outline: none;
+//   }
+
+//   &__select {
+//     background-color: #fff;
+//   }
+
+//   &__form-button {
+//     background-color: #0074d9;
+//     color: #fff;
+//     font-size: 18px;
+//     padding: 10px 20px;
+//     border: none;
+//     border-radius: 5px;
+//     cursor: pointer;
+//     &:hover {
+//       background-color: #0056b3;
+//     }
+//   }
+// }
+
 .book-car {
-  //max-width: 600px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: #fff;
+  text-align: center;
+  margin: 20px;
+  margin-bottom: 40px;
+  background-color: rgba(128, 128, 128, 0.668);
+  padding: 10px;
 
   &__title {
     font-size: 24px;
-    margin-bottom: 10px;
-  }
-
-  & h1 {
-    font-size: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
+    text-align: start;
   }
 
   &__form {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 10px;
+    align-items: center;
   }
 
   &__label {
-    font-size: 16px;
+    display: block;
     margin-bottom: 5px;
+    font-size: 16px;
   }
 
   &__select,
   &__datepicker {
     width: 100%;
-    padding: 10px;
+    padding: 8px;
     font-size: 16px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    outline: none;
   }
 
-  &__select {
-    background-color: #fff;
-  }
-
-  &__form-button {
-    background-color: #0074d9;
+  &__button {
+    grid-column: span 3; /* Span across all 3 columns */
+    background-color: #4285f4;
     color: #fff;
-    font-size: 18px;
     padding: 10px 20px;
+    font-size: 18px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    &:hover {
-      background-color: #0056b3;
-    }
+    transition: background-color 0.3s ease;
+  }
+
+  &__button:hover {
+    background-color: #72a2ef;
   }
 }

@@ -1,46 +1,46 @@
 @import "../../../node_modules/normalize.css/normalize.css";
 @import "./navBar";
 @import "./userModal";
-// @import "./signIn";
-// @import "./mixins";
-// @import "./footer";
-// @import "./hero";
-// @import "./bookCar";
-// @import "./modal";
-// @import "./planTrip";
-// @import "./pickCar";
-// @import "./banner";
-// @import "./chooseUs";
-// @import "./testomonial";
-// @import "./faq";
-// @import "./downland";
-// @import "./heroPages";
-// @import "./aboutCompany";
-// @import "./carBox";
-// @import "./ourTeamComponent";
-// @import "./contactComponent";
-// @import "./button";
-// @import "./desc";
-// @import "./link";
-// @import "./subtitle";
-// @import "./title";
-// @import "./userModal";
+@import "./hero";
+@import "./bookCar";
+@import "./modal";
 
-body {
-  margin: 0;
-  padding: 0;
-  background-color: rgb(193, 191, 191);
-}
-.content {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-.page-wrapper {
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-}
+@import "./signIn";
+@import "./mixins";
+@import "./footer";
+@import "./planTrip";
+@import "./pickCar";
+@import "./banner";
+@import "./chooseUs";
+@import "./testomonial";
+@import "./faq";
+@import "./downland";
+@import "./heroPages";
+@import "./aboutCompany";
+@import "./carBox";
+@import "./ourTeamComponent";
+@import "./contactComponent";
+@import "./button";
+@import "./desc";
+@import "./link";
+@import "./subtitle";
+@import "./title";
+
+// body {
+//   margin: 0;
+//   padding: 0;
+//   background-color: rgb(193, 191, 191);
+// }
+// .content {
+//   min-height: 100vh;
+//   display: flex;
+//   flex-direction: column;
+// }
+// .page-wrapper {
+//   flex-grow: 1;
+//   display: flex;
+//   flex-direction: column;
+// }
 a {
   text-decoration: none;
   color: black;
